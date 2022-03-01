@@ -11,13 +11,19 @@ DS-Practice
 
 1. **Мтематическая статистика :**
 
-    - [№1 Урок ](MatStat/Lesson_1.md)
+    - [№1 Урок ](matstat/Lesson_1.md)
 
 
 ---
 Библиотеки
 ---
 
-1.  **Библиотека Numpy :**
+1. **Библиотека Numpy :**
 
     - [№1 Урок ](numpy/Lesson_1.md)
+
+
+2. **Библиотека Matplotlib**       
+     
+     - [Установка, запуск, здание графиков и закраска. ](matplotlib/Lesson_1.md)
+     - [Множество графиков, ](matplotlib/Lesson_2.md)
