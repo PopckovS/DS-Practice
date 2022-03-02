@@ -3,23 +3,17 @@ import matplotlib
 import matplotlib.pyplot as plt
 
 
+y = [161, 164, 157, 166, 167, 167, 159, 165, 166, 167]
+y.sort()
 
-def func_1():
-    # Выбор программы для отображения
-    matplotlib.use('Qt5Agg')
+fig, line = plt.subplots()
+line.vlines(3, 167, 158, color='red')
 
-    # Узнать что используется для отображения
-    print('Для рисования используем = ', matplotlib.get_backend())
+plt.plot(y)
 
-    # Передаем параметры для Y-оси
-    plt.plot([1, 2, -6, 0, 4])
-
-    # Показать график
-    plt.show()
+plt.grid()
+plt.show()
 
 
 
-
-
-func_1()
 
