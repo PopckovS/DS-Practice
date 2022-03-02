@@ -2,13 +2,14 @@
 ---
 ---
 
-**Содержание:**
+Методы Numpy :
 
-1) Установка
-
-2) Методы:
-   - `numpy.array`
-   - `numpy.reshape`
+   - `np.array`
+   - `np.reshape`
+   - `np.mean`
+   - `np.median`
+   - `np.unique(list, return_counts=True)`
+   - `np.argmax()`
 
 
 ---

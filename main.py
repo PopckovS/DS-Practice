@@ -3,16 +3,21 @@ import matplotlib
 import matplotlib.pyplot as plt
 
 
-y = [161, 164, 157, 166, 167, 167, 159, 165, 166, 167]
-y.sort()
+mass = [161, 164, 157, 166, 167, 167, 159, 165, 166, 167]
+ca = 163.9
+result = 0
 
-fig, line = plt.subplots()
-line.vlines(3, 167, 158, color='red')
+for elem in mass:
+    result += int(ca - elem)
+    print('- ', int(ca - elem))
 
-plt.plot(y)
+print('result = ', result)
+print('mass = ', np.mean(mass))
 
-plt.grid()
-plt.show()
+# plt.plot(y)
+#
+# plt.grid()
+# plt.show()
 
 
 
