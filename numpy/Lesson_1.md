@@ -4,12 +4,14 @@
 
 Методы Numpy :
 
-   - `np.array`
-   - `np.reshape`
-   - `np.mean`
-   - `np.median`
+   - `np.array` - создать массив
+   - `np.reshape` - нарезать матрицу из набора данных
+   - `np.mean` - посчитать среднее из набора данных
+   - `np.median` - найти медиану из набора данных
    - `np.unique(list, return_counts=True)`
    - `np.argmax()`
+   - `np.var()` - получить Дисперсию из набора данных
+   - `np.array_split(array, number)` - делит массив на указанное количество частей
 
 
 ---
