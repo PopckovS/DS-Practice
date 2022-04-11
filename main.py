@@ -106,7 +106,13 @@ def func6():
 
 
 def func7():
+    path = 'Путь к файлу'
+    sheet_name = 'название страницы'
 
+    # получаем записи в виде словарей, {столбец:ячейка} из указанной страницы
+    df = pd.read_excel(path, na_filter=False, sheet_name=sheet_name)
+    df = df.to_dict(orient='index')
+    data = [elem for elem in df.values()]
 
 
 
