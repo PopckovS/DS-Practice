@@ -117,3 +117,16 @@ DataFrame
 ```python
     df['ВРИ'] = df['ВРИ'].str.replace('', None)
 ```
+
+---
+Замена `Nat` на `None`
+---
+
+Есть `Dataframe` который требуется очистить от типа данных `pd.NaT` и заменить их на
+`None`, скажем для того что бы иметь в столбце только тип даты/времени или `None`.
+
+```python
+df['Дата'] = df['Дата'].astype(object).
+                where(df['Дата'].
+                notnull(), None)
+```
