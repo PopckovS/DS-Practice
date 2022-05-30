@@ -126,7 +126,53 @@ DataFrame
 `None`, скажем для того что бы иметь в столбце только тип даты/времени или `None`.
 
 ```python
-df['Дата'] = df['Дата'].astype(object).
-                where(df['Дата'].
-                notnull(), None)
+df[field] = df[field].astype(object).where(df[field].notnull(), None)
 ```
+
+----
+Привести данные к числовому типу
+---
+Если требуется привести данные к числовому типу, как `int` или `float`, те данные 
+что возможно будут приведены к числу, те что привести нельзя будут приведены к типу
+`Nan`, если тип `Nan` не требуется то можно заменить `Nan` к стандартному для 
+`python` типу `None`
+
+```python
+df[field] = pd.to_numeric(df[field], errors='raise', downcast=None)
+
+# приводим к типу None если требуется 
+df[field] = df[field].astype(object).where(df[field].notnull(), None)
+```
+
+----
+Привести данные типу даты/времени
+---
+Если требуется привести данные к типу даты/времени. Если данные привести к типу
+даты/времени невозможно они будут приведены к `Nan`
+
+```python
+df[field] = pd.to_datetime(
+                           df[field], 
+                           format=settings.DATE_INPUT_FORMATS, 
+                           infer_datetime_format=True, 
+                           errors='raise'
+                        )
+
+# приводим к типу None если требуется
+df[field] = df[field].astype(object).where(df[field].notnull(), None)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
