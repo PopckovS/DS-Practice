@@ -1,12 +1,18 @@
->Pandas - библиотека для работы с данными
+Pandas - библиотека для работы с данными
+---
+
+[Официальная документация](https://pandas.pydata.org/pandas-docs/stable/)
 
 Установка
 
     pip3 install pandas
 
+Импорт
+
+    import pandas as pd
 ---
 
-Структуры данных:
+В pandas есть 2 структуры данных:
 1. Series (Ряды) 
 2. DataFrame
 
@@ -19,12 +25,13 @@ Series
 
 Создать `Series` можно из следующих объектов: 
 
-1. словари Python; 
-2. списки Python; 
-3. массивы из numpy: ndarray;
+1. Словари `Python`; 
+2. Списки `Python`; 
+3. Массивы из `numpy ndarray`;
 
 Ряд можно создать из списка, тогда и обращаться с ним можно как со списком
-по индексу
+по индексу :
+
 ```python
 import pandas as pd
 
@@ -53,7 +60,7 @@ import pandas as pd
 
 values = [1, 2, 3, 4, 5]
 keys = ['a', 'b', 'c', 'd', 'e']
-s1 = pd.Series(values, keys)
+s1 = pd.Series(values, index=keys)
 
 print(s1)
 
@@ -70,6 +77,68 @@ print('c = ', s1['c'])
 # a =  1
 # c =  3
 ```
+
+Если значения для ключей не заданы то `pd` принимает их за целочисленные значений,
+`dtype` - это указание какого типа содержатся данные в таком массиве, для
+чисел это к примеру `int64`
+
+Через атрибуты `index` и `values` мы можем увидеть значения и ключ нашего массива.
+
+```python
+d1 = [5, 6, 7, 8, 9, 10]
+
+my_series = pd.Series(d1)
+
+print(my_series.index)
+print(my_series.values)
+
+# RangeIndex(start=0, stop=6, step=1)
+# [ 5  6  7  8  9 10]
+```
+
+С помощью ключей мы можем получать выборку нужных элементов, и задавать новые значения
+группе элементов по этим индексам, следующим образом :
+
+```python
+val = [5, 6, 7, 8, 9, 10]
+index = ['a', 'b', 'c', 'd', 'e', 'f']
+
+my_series = pd.Series(val, index=index)
+
+print(my_series[['a', 'c', 'f']])
+
+my_series[['a', 'c', 'f']] = 0
+
+print(my_series)
+
+# Вывод
+#a     5
+#c     7
+#f    10
+#dtype: int64
+#
+#a    0
+#b    6
+#c    0
+#d    8
+#e    9
+#f    0
+#dtype: int64
+```
+
+Мы можем фильтровать данные передавая в качестве среза выражение для фильтрации,
+следующим образом
+
+```python
+result = my_series[my_series > 8]
+print(result)
+
+# Вывод
+#e     9
+#f    10
+#dtype: int64
+```
+
 
 ---
 DataFrame

@@ -17,20 +17,25 @@ DS-Practice
     - [№2 Урок ](matstat/Lesson_2.md)
 
 ---
-Библиотеки
+Библиотека Pandas
+---
+
+1. [№1 Урок ](pandas/Lesson_1.md)
+
+
+---
+Библиотека Matplotlib
+---
+
+1. **Библиотека Matplotlib**       
+     
+     - [Установка, запуск, здание графиков и закраска. ](matplotlib/Lesson_1.md)
+     - [Множество графиков, ](matplotlib/Lesson_2.md)
+
+---
+Библиотека Numpy
 ---
 
 1. **Библиотека Numpy :**
 
     - [№1 Урок ](numpy/Lesson_1.md)
-
-
-2. **Библиотека Pandas :**
-
-    - [№1 Урок ](pandas/Lesson_1.md)
-
-
-3. **Библиотека Matplotlib**       
-     
-     - [Установка, запуск, здание графиков и закраска. ](matplotlib/Lesson_1.md)
-     - [Множество графиков, ](matplotlib/Lesson_2.md)
