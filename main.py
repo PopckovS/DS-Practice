@@ -6,8 +6,23 @@ import psycopg2
 import pandas as pd
 import math
 
+import seaborn as sns
 
 import statistics
+
+
+def func0():
+
+    # сами значения
+    x = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    # частота появления значений
+    y = [1, 2, 4, 7, 9, 7, 4, 2, 1]
+
+    plt.plot(x, y)
+
+    plt.grid()
+    plt.show()
 
 
 def func1():
@@ -115,18 +130,37 @@ def func7():
     data = [elem for elem in df.values()]
 
 
+def func8():
+    x = [
+        185, 175, 170, 169, 171, 172, 175, 157, 170, 172, 167, 173, 168, 167, 166,
+        167, 169, 172, 177, 178, 165, 161, 179, 159, 164, 178, 172, 170, 173, 171
+    ]
+
+    values, counts = np.unique(x, return_counts=True)
+
+    print('Все значения = ', values)
+    print('Количество раз что они встречаются = ', counts)
+
+    index = np.argmax(counts)
+
+    print('Самое часто встречающееся число = ', values[index])
+    print(f'Число {values[index]} встречается {counts[index]} раз')
+
+    plt.plot(x)
+
+    plt.grid()
+    plt.show()
 
 
-
-
-
-
-
-
-
-
-
-func7()
+# func0()
+# func1()
+# func2()
+# func3()
+# func4()
+# func5()
+# func6()
+# func7()
+func8()
 
 
 
