@@ -21,6 +21,13 @@ DS-Practice
 ---
 
 1. [№1 Урок ](pandas/Lesson_1.md)
+2. [№2 Урок ](pandas/Lesson_2.md)
+
+---
+Библиотека GeoPandas
+---
+
+1. [№1 Урок ](geopandas/Lesson_1.md)
 
 
 ---
